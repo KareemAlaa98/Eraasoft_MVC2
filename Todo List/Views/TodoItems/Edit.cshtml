@@ -1,0 +1,18 @@
+﻿@model TodoItem
+
+
+<form method= "post" action="/todoitems/saveEdit/@Model.Id">
+    <div class="form-group">
+        <label for="exampleInputTitle">Title:</label>
+        <input type="text" name="title" class="form-control" id="exampleInputTitle" aria-describedby="titleHelp" value="@Model.Title">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDesc">Description:</label>
+        <input type="text" name="desc" class="form-control" id="exampleInputDesc" aria-describedby="descHelp" value="@Model.Description">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDeadline">Deadline:</label>
+        <input type="datetime-local" name="deadline" class="form-control" id="exampleInputDeadline" aria-describedby="deadlineHelp" value="@Model.Deadline">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
